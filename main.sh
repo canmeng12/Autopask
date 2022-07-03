@@ -27,6 +27,7 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
 rm -rf .svn
+rm -rf .github
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
@@ -34,7 +35,7 @@ svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
-svn export https://github.com/sirpdboy/sirpdboy-package/tree/luci-app-adguardhome
+svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
