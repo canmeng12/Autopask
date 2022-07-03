@@ -25,7 +25,8 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata
 
 #passwall
-svn export https://github.com/xiaorouji/openwrt-passwall/trunk/packages ./
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
+rm -rf .svn
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
