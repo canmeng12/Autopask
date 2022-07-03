@@ -34,7 +34,7 @@ svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
-svn export https://github.com/sirpdboy/sirpdboy-package/tree/main/luci-app-adguardhome
+svn export https://github.com/sirpdboy/sirpdboy-package/tree/luci-app-adguardhome
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
