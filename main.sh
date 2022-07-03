@@ -17,16 +17,21 @@ mv -n `find $1/* -maxdepth 0 -type d` ./
 rm -rf $1
 }
 
-git clone --depth 1 -b luci https://github.com/xiaorouji/openwrt-passwall passwall1 && mv -n passwall1/luci-app-passwall  ./; rm -rf passwall1
+#应用过滤
 git clone --depth 1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata
 
+#passwall
+svn export https://github.com/xiaorouji/openwrt-passwall/trunk ./
+svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci ./
+#ssrplus
+svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
-svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
 svn export https://github.com/sirpdboy/sirpdboy-package/tree/main/luci-app-adguardhome
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
