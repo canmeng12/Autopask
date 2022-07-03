@@ -30,7 +30,7 @@ rm -rf .svn
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-
+svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
@@ -39,5 +39,8 @@ svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupd
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
+
+rm -rf ./*/.git & rm -rf ./*/.gitattributes
+rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
 
 exit 0
