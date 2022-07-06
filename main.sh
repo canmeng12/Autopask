@@ -27,7 +27,7 @@ git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 
 git_clone https://github.com/kiddin9/openwrt-adguardhome && mvdir openwrt-adguardhome
 sed -i 's/adguardhome.yaml/config\/adguardhome.yaml/g' ./*adguardhome/Makefile
-
+sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/Makefile
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
 rm -rf .svn
