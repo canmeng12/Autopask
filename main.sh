@@ -33,7 +33,10 @@ rm -rf .svn
 rm -rf .github
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq
+sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-cpufreq/Makefile
+
 svn export https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-ramfree
+sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-ramfree/Makefile
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
