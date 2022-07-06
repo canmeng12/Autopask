@@ -33,6 +33,9 @@ svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
+sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-filetransfer/Makefile
+
+
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 svn export https://github.com/kiddin9/openwrt-packages/trunk/adguardhome
 svn export https://github.com/sirpdboy/sirpdboy-package/trunk/luci-app-adguardhome
