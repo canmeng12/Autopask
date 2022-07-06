@@ -25,13 +25,15 @@ git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 
-git_clone https://github.com/kiddin9/openwrt-adguardhome && mvdir openwrt-adguardhome
-sed -i 's/adguardhome.yaml/config\/adguardhome.yaml/g' ./*adguardhome/Makefile
+svn export https://github.com/kiddin9/openwrt-adguardhome/trunk/luci-app-adguardhome
 sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/Makefile
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
 rm -rf .svn
 rm -rf .github
+
+svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq
+svn export https://github.com/coolsnowwolf/luci/tree/master/applications/luci-app-ramfree
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
@@ -44,6 +46,7 @@ svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
 sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-turboacc/Makefile
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi
@@ -54,6 +57,8 @@ svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
+
+
 
 rm -rf ./*/.git & rm -rf ./*/.gitattributes
 rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
