@@ -13,7 +13,7 @@ function git_sparse_clone() {
   rm -rf $localdir
 }
 function mvdir() {
-  mv -n `find $1/* -maxdepth 0 -type d` ./
+  mv -n $(find $1/* -maxdepth 0 -type d) ./
   rm -rf $1
 }
 
@@ -26,7 +26,8 @@ git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 
 svn export https://github.com/kiddin9/openwrt-adguardhome/trunk/luci-app-adguardhome
-sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/Makefile
+sed -i 's@.*AdGuardHome.yaml*@#&@g' ./*adguardhome/Makefile
+sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/root/etc/config/AdGuardHome
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
 rm -rf .svn
@@ -61,9 +62,10 @@ svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 
-
-
-rm -rf ./*/.git & rm -rf ./*/.gitattributes
-rm -rf ./*/.svn & rm -rf ./*/.github & rm -rf ./*/.gitignore
+rm -rf ./*/.git &
+rm -rf ./*/.gitattributes
+rm -rf ./*/.svn &
+rm -rf ./*/.github &
+rm -rf ./*/.gitignore
 
 exit 0
