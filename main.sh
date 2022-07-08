@@ -32,22 +32,22 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./
 rm -rf .svn
 rm -rf .github
 
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ramfree
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-cpufreq
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-ramfree
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
+svn export https://github.com/turboacc/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-turboacc
 svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
 svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
 
-svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-guest-wifi
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 
