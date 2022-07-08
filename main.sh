@@ -34,10 +34,10 @@ rm -rf .svn
 rm -rf .github
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq
-sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-cpufreq/Makefile
+#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-cpufreq/Makefile
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ramfree
-sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-ramfree/Makefile
+#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-ramfree/Makefile
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
@@ -45,22 +45,30 @@ svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
-sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-filetransfer/Makefile
+#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-filetransfer/Makefile
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
 svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
-sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-turboacc/Makefile
+#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-turboacc/Makefile
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi
-sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-guest-wifi/Makefile
+#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-guest-wifi/Makefile
 
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
+#磁盘管理
+svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman
+mkdir -p parted && wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O parted/Makefile
+
+#实时流量监测
+svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-wrtbwmon
+
+sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-*/Makefile
 
 rm -rf ./*/.git &
 rm -rf ./*/.gitattributes
