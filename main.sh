@@ -21,7 +21,6 @@ function mvdir() {
 git clone --depth 1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata
-
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 
@@ -34,10 +33,7 @@ rm -rf .svn
 rm -rf .github
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq
-#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-cpufreq/Makefile
-
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ramfree
-#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-ramfree/Makefile
 
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 #ssrplus
@@ -45,17 +41,13 @@ svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-filetransfer
-#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-filetransfer/Makefile
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc
 svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
 svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
-#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-turboacc/Makefile
 
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi
-#sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-guest-wifi/Makefile
-
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus
 
