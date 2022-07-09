@@ -40,7 +40,7 @@ svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn export https://github.com/coolsnowwolf/packages/trunk/net/redsocks2
 
-svn export https://github.com/turboacc/luci/trunk/applications/luci-app-filetransfer
+svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-filetransfer
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-turboacc
