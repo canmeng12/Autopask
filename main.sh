@@ -20,10 +20,10 @@ function mvdir() {
 #应用过滤
 git clone --depth 1 https://github.com/destan19/OpenAppFilter && mvdir OpenAppFilter
 cd luci-app-oaf/po && ln -s zh-cn zh_Hans
-
+cd .. && cd ..
 git clone --depth 1 https://github.com/sirpdboy/luci-app-advanced
 git clone --depth 1 https://github.com/sirpdboy/luci-app-netdata && cd luci-app-netdata/po && ln -s zh-cn zh_Hans
-cd .. &cd ..
+cd .. && cd ..
 git clone --depth 1 https://github.com/jerrykuku/luci-app-argon-config
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon
 
@@ -53,7 +53,7 @@ svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
 svn export https://github.com/immortalwrt/luci/trunk/applications/luci-app-guest-wifi
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-wolplus &&cd luci-app-wolplus/po && ln -s zh-cn zh_Hans
-cd .. &cd ..
+cd .. && cd ..
 svn export https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 sed -i 's/+libcap /+libcap +libcap-bin /' luci-app-openclash/Makefile
 #磁盘管理
