@@ -80,6 +80,9 @@ svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ramf
 #IP/MAC绑定
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-arpbind && cd luci-app-arpbind/po && ln -s zh-cn zh_Hans && cd ../../
 
+#定时设置
+git clone --depth 1 https://github.com/sirpdboy/luci-app-autotimeset && cd luci-app-autotimeset/po && ln -s zh-cn zh_Hans && cd ../../
+
 sed -i 's/.\.\/.\./\$\(TOPDIR\)\/feeds\/luci/g' ./luci-app-*/Makefile
 
 rm -rf ./*/.git &
