@@ -74,7 +74,7 @@ svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-wrtb
 
 #CPU 性能优化调节
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-cpufreq && cd luci-app-cpufreq/po && ln -s zh-cn zh_Hans && cd ../../
-sed -i 's/\@\(aarch64||arm\)/ /g' luci-app-cpufreq/Makefile 
+sed -i 's/\@(aarch64||arm)/ /g' luci-app-cpufreq/Makefile 
 
 #释放内存
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-ramfree && cd luci-app-ramfree/po && ln -s zh-cn zh_Hans && cd ../../
