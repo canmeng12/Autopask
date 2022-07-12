@@ -36,6 +36,7 @@ sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/root/etc/c
 
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./ && rm -rf .svn && rm -rf .github
+rm -rf xray-core trojan-go parted
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 
 #ssrplus
@@ -47,9 +48,9 @@ svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-file
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 #Turbo ACC 网络加速
-#svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc && cd luci-app-turboacc/po && ln -s zh-cn zh_Hans && cd ../../
-#svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
-#svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
+svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-turboacc && cd luci-app-turboacc/po && ln -s zh-cn zh_Hans && cd ../../
+svn export https://github.com/coolsnowwolf/packages/trunk/net/dnsforwarder
+svn export https://github.com/coolsnowwolf/lede/trunk/package/lean/shortcut-fe
 
 #访客网络
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi && cd luci-app-guest-wifi/po && ln -s zh-cn zh_Hans && cd ../../
