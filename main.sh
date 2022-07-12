@@ -53,7 +53,7 @@ svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs
 
 #访客网络
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-guest-wifi && cd luci-app-guest-wifi/po && ln -s zh-cn zh_Hans && cd ../../
-sed -i 's/msgstr"/msgstr "/g' ./*guest-wifi/po/zh-cn/guest-wifi.po
+#sed -i 's/msgstr"/msgstr "/g' ./*guest-wifi/po/zh-cn/guest-wifi.po
 
 #简易更新
 svn export https://github.com/sundaqiang/openwrt-packages/trunk/luci-app-easyupdate && cd luci-app-easyupdate/po && ln -s zh-cn zh_Hans && cd ../../
