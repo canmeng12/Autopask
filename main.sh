@@ -36,7 +36,7 @@ sed -i 's/AdGuardHome.yaml/config\/AdGuardHome.yaml/g' ./*adguardhome/root/etc/c
 
 #passwall
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./ && rm -rf .svn && rm -rf .github
-rm -rf xray-core trojan-go parted
+rm -rf xray-core trojan-go
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
 
 #ssrplus
@@ -68,7 +68,7 @@ sed -i 's/+libcap /+libcap +libcap-bin /g' luci-app-openclash/Makefile
 
 #磁盘管理
 svn export https://github.com/lisaac/luci-app-diskman/trunk/applications/luci-app-diskman
-mkdir -p parted && wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O parted/Makefile
+#mkdir -p parted && wget https://raw.githubusercontent.com/lisaac/luci-app-diskman/master/Parted.Makefile -O parted/Makefile
 
 #实时流量监测
 svn export https://github.com/coolsnowwolf/luci/trunk/applications/luci-app-wrtbwmon && cd luci-app-wrtbwmon/po && ln -s zh-cn zh_Hans && cd ../../
