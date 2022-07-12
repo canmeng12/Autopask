@@ -39,7 +39,7 @@ sed -i 's/default y/default n/g' ./*adguardhome/Makefile
 svn co https://github.com/xiaorouji/openwrt-passwall/trunk ./ && rm -rf .svn && rm -rf .github
 rm -rf xray-core trojan-go
 svn export https://github.com/xiaorouji/openwrt-passwall/branches/luci/luci-app-passwall ./luci-app-passwall
-sed '92 s/n/y/' ./luci-app-passwall/Makefile
+sed -i '92 s/n/y/' ./luci-app-passwall/Makefile
 
 #ssrplus
 svn export https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
